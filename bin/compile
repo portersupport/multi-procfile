@@ -4,9 +4,11 @@ indent() {
     sed -u 's/^/       /'
 }
 
-BUILD_DIR=$1
-CACHE_DIR=$2
-ENV_DIR=$3
+BUILD_DIR="/workspace"
+CACHE_DIR=$1
+LAYERS_DIR=$1
+ENV_DIR="/platform/env/"
+BP_DIR=$CNB_BUILDPACK_DIR
 
 PROCFILE=$(cat "${ENV_DIR}/PROCFILE")
 
